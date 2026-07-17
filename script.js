@@ -63,4 +63,26 @@ document.getElementById("stellarium").onclick = () => {
       "_blank"
     );
 };
+function iniciarContador(){
+
+    const inicio = new Date("2026-07-17T00:00:00");
+    const contador = document.getElementById("counter");
+
+    setInterval(()=>{
+
+        const agora = new Date();
+        const diferenca = agora - inicio;
+
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+        const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
+        const segundos = Math.floor((diferenca / 1000) % 60);
+
+        contador.innerHTML =
+        `Esta estrela foi escolhida há:<br>
+        ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.`;
+
+    },1000);
+
+}
 };
