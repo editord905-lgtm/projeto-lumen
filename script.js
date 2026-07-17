@@ -58,7 +58,7 @@ button.onclick = () => {
 };
 document.getElementById("stellarium").onclick = () => {
     window.open(
-      "https://stellarium-web.org/",
+      "https://stellarium-web.org/?search=Regulus",
       "_blank"
     );
 };
