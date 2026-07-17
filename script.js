@@ -57,7 +57,7 @@ Distância: aproximadamente 79 anos-luz
 </p>
 
 };
-document.getElementById("stellarium").onclick = () => {
+document.getElementById("stellarium").onclick = () => {iniciarContador();
     window.open(
       "https://stellarium-web.org/?search=Regulus",
       "_blank"
