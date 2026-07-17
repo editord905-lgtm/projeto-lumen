@@ -52,6 +52,8 @@ const button = document.getElementById("open-letter");
 const letter = document.getElementById("letter");
 
 
+if(button){
+
 button.onclick = () => {
 
     regulus.style.display = "none";
@@ -61,10 +63,16 @@ button.onclick = () => {
 
 };
 
+}
+
 
 // Stellarium
 
-document.getElementById("stellarium").onclick = () => {
+const stellarium = document.getElementById("stellarium");
+
+if(stellarium){
+
+stellarium.onclick = () => {
 
     window.open(
         "https://stellarium-web.org/?search=Regulus",
@@ -73,6 +81,8 @@ document.getElementById("stellarium").onclick = () => {
 
 };
 
+}
+
 
 // contador
 
@@ -80,6 +90,8 @@ function iniciarContador(){
 
     const inicio = new Date("2026-07-17T00:00:00");
     const contador = document.getElementById("counter");
+
+    if(!contador) return;
 
 
     setInterval(() => {
