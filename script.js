@@ -13,6 +13,7 @@ const intro = document.getElementById("intro");
 const travel = document.getElementById("travel");
 const regulus = document.getElementById("regulus");
 
+
 setTimeout(() => {
     intro.style.display = "none";
     travel.style.display = "block";
@@ -50,33 +51,59 @@ for(let i = 0; i < 120; i++){
 const button = document.getElementById("open-letter");
 const letter = document.getElementById("letter");
 
-<p class="coordinates">
-Ascensão reta: 10h 08m 22s<br>
-Declinação: +11° 58′ 02″<br>
-Distância: aproximadamente 79 anos-luz
-</p>
+
+button.onclick = () => {
+
+    regulus.style.display = "none";
+    letter.classList.remove("hidden");
+
+    iniciarContador();
 
 };
-document.getElementById("stellarium").onclick = () => {iniciarContador();
+
+
+// Stellarium
+
+document.getElementById("stellarium").onclick = () => {
+
     window.open(
-      "https://stellarium-web.org/?search=Regulus",
-      "_blank"
+        "https://stellarium-web.org/?search=Regulus",
+        "_blank"
     );
+
 };
+
+
+// contador
+
 function iniciarContador(){
 
     const inicio = new Date("2026-07-17T00:00:00");
     const contador = document.getElementById("counter");
 
-    setInterval(()=>{
+
+    setInterval(() => {
 
         const agora = new Date();
         const diferenca = agora - inicio;
 
-        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-        const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
-        const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
-        const segundos = Math.floor((diferenca / 1000) % 60);
+
+        const dias = Math.floor(
+            diferenca / (1000 * 60 * 60 * 24)
+        );
+
+        const horas = Math.floor(
+            (diferenca / (1000 * 60 * 60)) % 24
+        );
+
+        const minutos = Math.floor(
+            (diferenca / (1000 * 60)) % 60
+        );
+
+        const segundos = Math.floor(
+            (diferenca / 1000) % 60
+        );
+
 
         contador.innerHTML =
         `Esta estrela foi escolhida há:<br>
@@ -85,4 +112,5 @@ function iniciarContador(){
     },1000);
 
 }
+
 };
