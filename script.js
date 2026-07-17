@@ -56,5 +56,10 @@ button.onclick = () => {
     letter.classList.remove("hidden");
 
 };
-
+document.getElementById("stellarium").onclick = () => {
+    window.open(
+      "https://stellarium-web.org/",
+      "_blank"
+    );
+};
 };
