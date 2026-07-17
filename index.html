@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Lumen</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto Lumen</title>
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body style="background:black; color:white; display:flex; justify-content:center; align-items:center; height:100vh; font-family:Georgia, serif;">
-
-<div style="text-align:center;">
-
-<h1>Projeto Lumen</h1>
-
-<p>Uma estrela escolhida para alguém inesquecível.</p>
-
-<h2>✨ Thays Máriam ✨</h2>
-
-<p>Em breve, uma experiência feita especialmente para você.</p>
-
+<div id="loading-screen">
+  <div class="loading-star">✦</div>
+  <p id="loading-text">Inicializando Catálogo Celeste...</p>
 </div>
+
+<main id="experience" class="hidden">
+
+<section id="intro" class="screen">
+<h1 class="fade">Existem cerca de <strong>200 sextilhões</strong> de estrelas no universo observável.</h1>
+<p class="fade delay">Mesmo assim...</p>
+<p class="fade delay2">Apenas uma foi escolhida.</p>
+</section>
+
+<section id="travel" class="screen">
+<div id="starfield"></div>
+</section>
+
+<section id="regulus" class="screen">
+<div class="star">✦</div>
+<h1>Thays Máriam</h1>
+<h2>Regulus • Constelação de Leão</h2>
+<p>
+Entre bilhões de estrelas, esta foi escolhida para representar
+alguém que iluminou uma vida.
+</p>
+<button id="open-letter">Abrir carta</button>
+</section>
+
+<section id="letter" class="screen hidden">
+<div class="letter-card">
+<h2>Para Thays</h2>
+
+<p>
+Se você chegou até aqui, significa que encontrou a estrela que escolhi para você.
+</p>
+
+<p>
+Daqui em diante, esta carta será escrita por mim.
+</p>
+
+<p id="counter"></p>
+
+<button id="stellarium">
+Ver esta estrela no Stellarium
+</button>
+</div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
 
 </body>
 </html>
