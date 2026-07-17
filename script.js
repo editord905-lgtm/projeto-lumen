@@ -50,10 +50,11 @@ for(let i = 0; i < 120; i++){
 const button = document.getElementById("open-letter");
 const letter = document.getElementById("letter");
 
-button.onclick = () => {
-
-    regulus.style.display = "none";
-    letter.classList.remove("hidden");
+<p class="coordinates">
+Ascensão reta: 10h 08m 22s<br>
+Declinação: +11° 58′ 02″<br>
+Distância: aproximadamente 79 anos-luz
+</p>
 
 };
 document.getElementById("stellarium").onclick = () => {
